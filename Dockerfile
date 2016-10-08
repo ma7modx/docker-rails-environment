@@ -39,9 +39,9 @@ RUN apt-get install -y --no-install-recommends mysql-client libmysqlclient-dev
 RUN bash -c "add-apt-repository -y ppa:webupd8team/java"
 RUN bash -c "add-apt-repository ppa:openjdk-r/ppa"  
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends openjdk-7-jre
+RUN apt-get install -y openjdk-7-jre
 RUN bash -c 'debconf-set-selections <<< "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true"'
-RUN apt-get install -y --no-install-recommends oracle-java8-installer
+RUN apt-get install -y oracle-java8-installer
 RUN wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.2.deb
 RUN dpkg -i elasticsearch-1.7.2.deb
 
