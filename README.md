@@ -25,7 +25,7 @@
   
   docker run -i -t -p 8080:3000 -v /docker_shared/:/home/src:rw rails-development-environment
   ```
-  these folders will be shared between docker and the host
+  these folders will be shared and auto updated between docker and host
 
 ### Notes
   **mysql root password: letmein**
