@@ -2,7 +2,7 @@
   This repository contains Dockerfile for rails installation and the most commonly used dependencies in development.
 
 ## Base docker image
-  [dockerfile/ubutnu-14.04.5] (https://hub.docker.com/_/ubuntu/)
+  [ubutnu-14.04.5] (https://hub.docker.com/_/ubuntu/)
 
 ## On this Dockerfile
   - RVM
