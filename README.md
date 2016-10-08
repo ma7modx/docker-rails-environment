@@ -21,5 +21,5 @@
 ## Usage
 
 ### Notes
-  mysql root password: letmein
+  **mysql root password: letmein**
   
