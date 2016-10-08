@@ -2,7 +2,7 @@
   This repository contains Dockerfile for rails and the most common dependencies used in development.
 
 ## Base docker image
-  [dockerfile/ubutnu] (http://dockerfile.github.io/#/ubuntu)
+  [dockerfile/ubutnu-14.04.5] (https://hub.docker.com/_/ubuntu/)
 
 ## On this Dockerfile
   - RVM 
@@ -19,4 +19,7 @@
   2. docker pull ma7modx/rails-development-environment.
   
 ## Usage
+
+### Notes
+  mysql root password: letmein
   
