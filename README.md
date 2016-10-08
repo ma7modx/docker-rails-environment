@@ -5,8 +5,7 @@
   [dockerfile/ubutnu-14.04.5] (https://hub.docker.com/_/ubuntu/)
 
 ## On this Dockerfile
-  - RVM 
-  - Ruby 1.9.3-p484
+  - RVM
   - Ruby 2.3.1 
   - Rails 4.2.6
   - Nodejs
@@ -19,7 +18,14 @@
   2. docker pull ma7modx/rails-development-environment.
   
 ## Usage
-  - docker run -i -t -v {host volume}:{container volume}:rw {image name} {command}
+  - docker run -i -t -v {host volume}:{container volume}:rw {image name}
+  e.g.
+  ```
+  sudo mkdir /docker_shared
+  
+  docker run -i -t -p 8080:3000 -v /docker_shared/:/home/src:rw rails-development-environment
+  ```
+  these folders will be shared between docker and the host
 
 ### Notes
   **mysql root password: letmein**
