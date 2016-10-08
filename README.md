@@ -1,5 +1,5 @@
 # docker-rails-environment
-  This repository contains Dockerfile for rails development environment.
+  This repository contains Dockerfile for rails and the most common dependencies used in development.
 
 ## Base docker image
   [dockerfile/ubutnu] (http://dockerfile.github.io/#/ubuntu)
