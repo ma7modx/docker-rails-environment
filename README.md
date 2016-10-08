@@ -2,9 +2,9 @@
   This repository contains Dockerfile for rails development environment.
 
 ## Base docker image
-  dockerfile/ubutnu
+  [dockerfile/ubutnu] (http://dockerfile.github.io/#/ubuntu)
 
-## on this Dockerfile image
+## On this Dockerfile
   - RVM 
   - Ruby 1.9.3-p484
   - Ruby 2.3.1 
@@ -13,4 +13,10 @@
   - Mysql
   - Elasticsearch
   - Redis
-
+  
+## Installation 
+  1. Install [Docker] (https://www.docker.com/).
+  2. docker pull ma7modx/rails-development-environment.
+  
+## Usage
+  
