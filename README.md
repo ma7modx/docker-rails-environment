@@ -15,17 +15,20 @@
   
 ## Installation 
   1. Install [Docker] (https://www.docker.com/).
-  2. docker pull ma7modx/rails-development-environment.
+  2. Pull the image 
+    ```
+    docker pull ma7modx/rails-development-environment.
+    ```
   
 ## Usage
-  - docker run -i -t -v {host volume}:{container volume}:rw {image name}
+  - docker run -i -t -p {published port}:{original port} -v {host volume}:{container volume}:rw {image name}
   e.g.
   ```
   sudo mkdir /docker_shared
   
-  docker run -i -t -p 8080:3000 -v /docker_shared/:/home/src:rw rails-development-environment
+  docker run -i -t -p 8080:3000 -v /docker_shared/:/home/src:rw ma7modx/rails-development-environment
   ```
-  these folders will be shared and auto updated between docker and host
+  these folders will be shared and auto updated between docker and host, and port 3000 will be published to 8080
 
 ### Notes
   **mysql root password: letmein**
