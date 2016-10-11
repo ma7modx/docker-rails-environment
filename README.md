@@ -24,9 +24,9 @@
   - docker run -i -t -p {published port}:{original port} -v {host volume}:{container volume}:rw {image name}
   e.g.
   ```
-  sudo mkdir /docker_shared
+  mkdir /home/{user}/docker_shared
   
-  sudo docker run -i -t -p 8080:3000 -v /docker_shared/:/home/src:rw ma7modx/rails-development-environment
+  sudo docker run -i -t -p 8080:3000 -v /home/{user}/docker_shared/:/home/src:rw ma7modx/rails-development-environment
   ```
   these folders will be shared and auto updated between docker and host, and port 3000 will be published to 8080
 
