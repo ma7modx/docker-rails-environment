@@ -21,12 +21,12 @@
     ```
   
 ## Usage
-  - docker run -i -t -p {published port}:{original port} -v {host volume}:{container volume}:rw {image name}
+  - docker run -i -t -p {published port}:{original port} -v {host volume}:{container volume}:rw {image name} {command}
   e.g.
   ```
   mkdir /home/{user}/docker_shared
   
-  sudo docker run -i -t -p 8080:3000 -v /home/{user}/docker_shared/:/home/src:rw ma7modx/rails-development-environment
+  sudo docker run -i -t -p 8080:3000 -v /home/{user}/docker_shared/:/home/src:rw ma7modx/rails-development-environment /bin/bash -l
   ```
   these folders will be shared and auto updated between docker and host, and port 3000 will be published to 8080
 
