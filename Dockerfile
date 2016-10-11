@@ -28,12 +28,15 @@ EXPOSE 3000
 # mysql
 RUN apt-get install -y --no-install-recommends debconf-utils
 ENV DEBIAN_FRONTEND noninteractive
-ENV MYSQL_ROOT_PASSWORD letmein
+ENV MYSQL_ROOT_PASSWORD ''
 
 RUN bash -c 'debconf-set-selections <<< "mysql-server mysql-server/root_password password $MYSQL_ROOT_PASSWORD"'
 RUN bash -c 'debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $MYSQL_ROOT_PASSWORD"'
 RUN apt-get install -qqy --no-install-recommends mysql-server
+VOLUME ["/etc/mysql", "/var/lib/mysql"]
 RUN apt-get install -y --no-install-recommends mysql-client libmysqlclient-dev
+RUN bash -c 'service mysql restart'
+EXPOSE 3306
 
 # elasticsearch
 RUN bash -c "add-apt-repository -y ppa:webupd8team/java"
@@ -44,6 +47,7 @@ RUN bash -c 'debconf-set-selections <<< "oracle-java8-installer shared/accepted-
 RUN apt-get install -y oracle-java8-installer
 RUN wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.2.deb
 RUN dpkg -i elasticsearch-1.7.2.deb
+EXPOSE 9200
 
 # redis
 RUN apt-get install -y --no-install-recommends build-essential tcl8.5
