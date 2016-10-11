@@ -33,6 +33,10 @@
   ```
   sudo docker start -i ma7modx/rails-development-environment
   ```
+  - you may need to run this command to create mysql socket if it wasn't created
+  ```
+  service mysql restart
+  ```
 
 ### Notes
   mysql root password is empty string
