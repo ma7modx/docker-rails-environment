@@ -30,10 +30,12 @@
   ```
   these folders will be shared and auto updated between docker and host, and port 3000 will be published to 8080
   - docker run command should be used only on the first time to build the container, to reuse this container 
+  
   ```
   sudo docker start -i ma7modx/rails-development-environment
   ```
   - you may need to run this command to create mysql socket if it wasn't created
+  
   ```
   service mysql restart
   ```
