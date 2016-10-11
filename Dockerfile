@@ -5,7 +5,7 @@ EXPOSE 80
 
 # default packages
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends wget nano less dpkg curl
+RUN apt-get install -y --no-install-recommends wget nano less dpkg curl ssh
 RUN apt-get install -y --no-install-recommends software-properties-common
 
 # dependencies for ruby
