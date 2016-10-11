@@ -26,10 +26,14 @@
   ```
   mkdir /home/{user}/docker_shared
   
-  sudo docker run -i -t -p 8080:3000 -v /home/{user}/docker_shared/:/home/src:rw ma7modx/rails-development-environment /bin/bash -l
+  sudo docker run -i -t -p 3000:3000 -p 6379:6379 -p 3306:3306 -p 9200:9200 -v /home/{user}/docker_shared/:/home/src:rw ma7modx/rails-development-environment /bin/bash -l
   ```
   these folders will be shared and auto updated between docker and host, and port 3000 will be published to 8080
+  - docker run command should be used only on the first time to build the container, to reuse this container 
+  ```
+  sudo docker start -i ma7modx/rails-development-environment
+  ```
 
 ### Notes
-  **mysql root password: letmein**
+  mysql root password is empty string
   
